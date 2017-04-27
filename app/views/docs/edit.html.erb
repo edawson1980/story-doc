@@ -1,0 +1,14 @@
+<h1>make changes to your profile here</h1>
+
+<%= form_for @doc do |f| %>
+Name: <%= f.text_field :name %>
+Base: <%= f.text_field :location %>
+Gender: <%= f.text_field :gender %>
+Photo: <%= f.text_field :img_url %>
+<%= f.submit %>
+<% end %>
+
+<h3>delete your profile?</h3>
+<%= form_for @doc, method: :delete do |f| %>
+<%= f.submit "Delete!", class: "delete" %>
+<% end %>

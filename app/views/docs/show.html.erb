@@ -1,0 +1,6 @@
+<h1><%= @doc.name %></h1>
+
+<h2><%= @doc.location %></h2>
+<%= image_tag @doc.img_url %>
+
+<h2><%= link_to "Edit?", edit_doc_path(@doc) %></h2>

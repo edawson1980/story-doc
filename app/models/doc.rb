@@ -1,3 +1,3 @@
-class Doc < ActiveRecord::Base
+class Doc < ApplicationRecord
   has_many :projects
 end

@@ -1,4 +1,0 @@
-class DocsController < ApplicationController
-
-
-end
