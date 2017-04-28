@@ -3,4 +3,9 @@
 <h2><%= @doc.location %></h2>
 <%= image_tag @doc.img_url %>
 
-<h2><%= link_to "Edit?", edit_doc_path(@doc) %></h2>
+<h2>Stories</h2>
+<% @doc.projects.each do |project| %>
+    <h3><%= link_to project.title, project %></h3>
+<% end %>
+
+<h2><%= link_to "Edit profile?", edit_doc_path(@doc) %></h2>
