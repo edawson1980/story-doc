@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 root 'docs#index'
 
-  resources :docs
-  resources :projects
+  resources :docs do
+    resources :projects
+  end
+
 end

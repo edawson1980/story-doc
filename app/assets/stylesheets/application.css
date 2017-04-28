@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  color: red;
+  background: #B4EEB4;
+
+}
+img {
+  border-radius: 40%;
+  height: 300px;
+}
+
+.static {
+  background-image: url('wood_pattern_@2X.png');
+}
+
+.static h3{
+  text-align: right;
+}
+
+.show {
+  text-align: center;
+  border: 4px black solid;
+}

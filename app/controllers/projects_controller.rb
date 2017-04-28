@@ -5,39 +5,45 @@ class ProjectsController < ApplicationController
   end
 
   def new
+    @doc = Doc.find(params[:doc_id])
     @project = Project.new
   end
 
   def create
+    @doc = Doc.find(params[:doc_id])
     @project = Project.create!(project_params)
-    redirect_to project_path(@project)
+    redirect_to doc_project_path(@doc, @project)
   end
 
   def show
+    @doc = Doc.find(params[:doc_id])
     @project = Project.find(params[:id])
   end
 
   def edit
+    @doc = Doc.find(params[:doc_id])
     @project = Project.find(params[:id])
   end
 
   def update
+    @doc = Doc.find(params[:doc_id])
     @project = Project.find(params[:id])
-    project.update!(project_params)
+    @project.update!(project_params)
 
-    redirect_to project_path(@project)
+    redirect_to doc_project_path(@project)
   end
 
   def destroy
+    @doc = Doc.find(params[:doc_id])
     @project = Project.find(params[:id])
     @project.destroy
 
-    redirect_to projects_path
+    redirect_to doc_path(@doc)
   end
 
   private
   def project_params
-    params.require(:project).permit(:title, :theme, :img_url, :doc_id)
+    params.require(:project).permit(:title, :theme, :img_url)
   end
 
 

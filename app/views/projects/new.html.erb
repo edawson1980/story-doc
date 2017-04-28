@@ -1,9 +1,8 @@
 <h1>add your story here.</h1>
 
-<%= form_for :project, url: projects_path do |f| %>
+<%= form_for [@doc, @project] do |f| %>
     title: <%= f.text_field :title %><br>
     theme: <%= f.text_field :theme %><br>
     photos: <%= f.text_field :img_url %><br>
-    documentarian: <%= f.text_field :doc_id %><br>
   <%= f.submit %>
 <% end %>
