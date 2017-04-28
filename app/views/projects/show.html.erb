@@ -1,0 +1,10 @@
+<h2><%= @project.title %></h2>
+
+<h4>by: <%= @project.doc_id %></h4>
+
+<h4>theme(s):<%= @project.theme %></h4>
+
+<%= image_tag @project.img_url %>
+
+
+<%= link_to "Edit?", edit_project_path(@project) %>
