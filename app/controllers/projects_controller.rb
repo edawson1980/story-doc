@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
 
   def create
     @doc = Doc.find(params[:doc_id])
-    @project = Project.create!(project_params)
+    @project = @doc.projects.create!(project_params)
     redirect_to doc_project_path(@doc, @project)
   end
 
@@ -30,7 +30,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @project.update!(project_params)
 
-    redirect_to doc_project_path(@project)
+    redirect_to doc_project_path(@doc, @project)
   end
 
   def destroy

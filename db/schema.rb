@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427194926) do
+ActiveRecord::Schema.define(version: 20170428191955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,4 +34,5 @@ ActiveRecord::Schema.define(version: 20170427194926) do
     t.index ["doc_id"], name: "index_projects_on_doc_id", using: :btree
   end
 
+  add_foreign_key "projects", "docs"
 end
