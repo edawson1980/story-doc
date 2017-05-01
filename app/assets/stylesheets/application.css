@@ -15,8 +15,8 @@
  */
 
 body {
-  color: red;
-  background: #B4EEB4;
+  color: #FAFAFA;
+  background: #978286;
 
 }
 img {
@@ -25,7 +25,8 @@ img {
 }
 
 .static {
-  background-image: url('wood_pattern_@2X.png');
+  /*background-image: url('wood_pattern_@2X.png');*/
+  background-color: #829793;
 }
 
 .static h3{
