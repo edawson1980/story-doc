@@ -1,12 +1,27 @@
-<h2><%= @project.title %></h2>
+<div class="project">
 
-<h4>by: <%= @project.doc.name %></h4>
 
-<h4>theme(s):<%= @project.theme %></h4>
 
-<%= image_tag @project.img_url %>
+<div>
+  <h2><%= @project.title %></h2>
 
-<h3> <%= @project.body %></h3>
+  <h4>by: <%= @project.doc.name %></h4>
+</div>
+
+<div>
+  <h4>theme(s):<%= @project.theme %></h4>
+</div>
+
+<div class="gallery">
+  <%= image_tag @project.img_url %>
+</div>
+
+<div>
+  <h3> <%= @project.body %></h3>
+</div>
+
 
 
 <%= link_to "Edit?", edit_doc_project_path(@doc, @project) %>
+
+</div>

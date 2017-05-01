@@ -1,3 +1,6 @@
+<div class="show">
+
+
 <h2>edit your story here</h2>
 
 <%= form_for [@doc, @project] do |f| %>
@@ -13,3 +16,5 @@
 <%= form_for [@doc, @project], method: :delete do |f| %>
 <%= f.submit "Delete!", class: "delete" %>
 <% end %>
+
+</div>

@@ -15,6 +15,7 @@
  */
 
 body {
+  font-family: 'Josefin Slab', serif;
   color: #FAFAFA;
   background: #978286;
 
@@ -22,18 +23,38 @@ body {
 img {
   border-radius: 40%;
   height: 300px;
+
+}
+
+a {
+  text-decoration: none;
+  color: #FAFAFA;
+}
+
+a :visited {
+  color: #FAFAFA;
 }
 
 .static {
   /*background-image: url('wood_pattern_@2X.png');*/
   background-color: #829793;
+  border: 2px black solid;
 }
 
 .static h3{
   text-align: right;
+
 }
 
 .show {
+  font-family: 'Amatic SC', cursive;
   text-align: center;
-  border: 4px black solid;
+  border: 2px black solid;
+}
+
+.project {
+  font-family: 'Amatic SC', cursive;
+  border: 2px black solid;
+  display: flex;
+  justify-content: space-between;
 }
