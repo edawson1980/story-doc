@@ -21,7 +21,7 @@ body {
 
 }
 img {
-  border-radius: 40%;
+  border-radius: 40px;
   height: 300px;
 
 }
@@ -39,6 +39,8 @@ a :visited {
   /*background-image: url('wood_pattern_@2X.png');*/
   background-color: #829793;
   border: 2px black solid;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .static h3{
@@ -50,11 +52,31 @@ a :visited {
   font-family: 'Amatic SC', cursive;
   text-align: center;
   border: 2px black solid;
+  padding-bottom: 10px;
+  margin-top: 5px;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-right: 10%;
+
 }
 
 .project {
   font-family: 'Amatic SC', cursive;
   border: 2px black solid;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }

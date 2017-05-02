@@ -8,9 +8,13 @@
 
 <%= form_for [@doc, @project] do |f| %>
     title: <%= f.text_field :title %><br>
+    <br>
     theme: <%= f.text_field :theme %><br>
+    <br>
     photos: <%= f.text_field :img_url %><br>
-    body: <%= f.text_area :body %><br>
+    <br>
+    body: <%= f.text_area :body, cols: "50", rows: "10" %><br>
+    <br>
   <%= f.submit %>
 <% end %>
 

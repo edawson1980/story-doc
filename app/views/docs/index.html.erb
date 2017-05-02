@@ -1,3 +1,11 @@
+
+  <div class="hero">
+    <%= image_tag("thumb_IMG_2057_1024.jpg") %>
+    <%= image_tag("IMG_0260.jpg") %>
+    <%= image_tag("IMG_0325.jpg") %>
+  </div>
+
+<div class="index">
 <h1>Documentarians: </h1>
 
 <h2>Create new <%= link_to"(+)", new_doc_path %> </h2>
@@ -5,3 +13,4 @@
   <% @docs.each do |doc| %>
   <h2><%= link_to doc.name, doc %></h2>
   <% end %>
+</div>
