@@ -1,5 +1,11 @@
 class DocsController < ApplicationController
 
+  before_action :set_session
+
+  def set_session
+    session[:history] ||= []
+  end
+
   def index
     @docs = Doc.all
   end
@@ -10,11 +16,12 @@ class DocsController < ApplicationController
 
   def create
     @doc = Doc.create!(doc_params)
-    redirect_to doc_path(@doc)
+    redirect_to doc_path(@doc), notice: "Documentarian created!"
   end
 
   def show
     @doc = Doc.find(params[:id])
+    session[:history].push(@doc.name)
   end
 
   def edit
@@ -39,5 +46,5 @@ class DocsController < ApplicationController
   def doc_params
     params.require(:doc).permit(:name, :location, :gender, :img_url)
   end
-  
+
 end

@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
   def create
     @doc = Doc.find(params[:doc_id])
     @project = @doc.projects.create!(project_params)
-    redirect_to doc_project_path(@doc, @project)
+    redirect_to doc_project_path(@doc, @project), notice: "Story created!"
   end
 
   def show

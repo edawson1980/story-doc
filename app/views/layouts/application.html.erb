@@ -17,8 +17,12 @@
       <h1>StoryDoc <% link_to root_path %></h1>
       <h3>Home for Documentarians and their Stories.</h3>
 
+      Visited Documentarians: <%= session[:history] %>
 
-
+      <% flash.each do |type, message| %>
+      <p class="flash <%= type %>"><%= message %></p>
+      <% end %>
+      
     </div>
     <%= yield %>
   </body>
