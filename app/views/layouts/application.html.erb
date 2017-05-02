@@ -22,8 +22,16 @@
       <% flash.each do |type, message| %>
       <p class="flash <%= type %>"><%= message %></p>
       <% end %>
-      
+
     </div>
+    <% if !current_user %>
+      <%= link_to "New to StoryDoc?  Join Here!", new_user_registration_path %>
+      <%= link_to "Sign in to your StoryDoc account", new_user_session_path %>
+    <% else %>
+      <%= link_to "Sign out of StoryDoc", destroy_user_session_path, :method => :delete %>
+        <%= current_user.email %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
