@@ -4,12 +4,10 @@
 
   <h2><%= @doc.location %></h2>
 
-<div class="themes">
-  <h3>Theme(s):<%= @doc.projects %></h3>
-</div>
+
 
 <div class="profile">
-  <%= image_tag @doc.img_url %>
+  <%= image_tag @doc.img_url unless @doc.img_url.blank? %>
 </div>
 
 <h2>Stories</h2>

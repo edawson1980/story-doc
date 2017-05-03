@@ -15,9 +15,9 @@ class DocsController < ApplicationController
   end
 
   def create
-    @doc = Doc.create!(doc_params)
+    @doc = Doc.create!(doc_params.merge(doc: current_doc))
     redirect_to doc_path(@doc), notice: "Documentarian created!"
-  end
+end
 
   def show
     @doc = Doc.find(params[:id])
@@ -30,21 +30,28 @@ class DocsController < ApplicationController
 
   def update
     @doc = Doc.find(params[:id])
-    @doc.update(doc_params)
-
+    if @doc == current_doc
+      @doc.update(doc_params)
+    else
+      flash[:alert] = "Only owner can edit"
+    end
     redirect_to doc_path(@doc)
   end
 
   def destroy
     @doc = Doc.find(params[:id])
-    @doc.destroy
-
+    if @doc == current_doc
+      @doc.destroy
+    else
+      flash[:alert] = "Only owner can delete"
+    end
     redirect_to docs_path
   end
 
   private
   def doc_params
     params.require(:doc).permit(:name, :location, :gender, :img_url)
+
   end
 
 end

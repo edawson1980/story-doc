@@ -28,16 +28,22 @@ class ProjectsController < ApplicationController
   def update
     @doc = Doc.find(params[:doc_id])
     @project = Project.find(params[:id])
-    @project.update!(project_params)
-
+    if @project.doc == current_doc
+      @project.update!(project_params)
+    else
+      flash[:alert] = "Only owner can edit"
+    end
     redirect_to doc_project_path(@doc, @project)
   end
 
   def destroy
     @doc = Doc.find(params[:doc_id])
     @project = Project.find(params[:id])
-    @project.destroy
-
+    if @project.doc == current_doc
+      @project.destroy
+    else
+      flash[:alert] = "Only owner can delete"
+    end
     redirect_to doc_path(@doc)
   end
 

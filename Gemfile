@@ -53,3 +53,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
+
+gem 'ajaxful_rating' , '>= 3.0.0.beta7'
+
+gem 'carrierwave'
