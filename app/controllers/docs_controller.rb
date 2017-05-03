@@ -17,7 +17,7 @@ class DocsController < ApplicationController
   def create
     @doc = Doc.create!(doc_params)
     redirect_to doc_path(@doc), notice: "Documentarian created!"
-  end
+end
 
   def show
     @doc = Doc.find(params[:id])
@@ -45,6 +45,7 @@ class DocsController < ApplicationController
   private
   def doc_params
     params.require(:doc).permit(:name, :location, :gender, :img_url)
+
   end
 
 end

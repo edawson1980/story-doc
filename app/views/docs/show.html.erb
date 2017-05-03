@@ -9,7 +9,7 @@
 </div>
 
 <div class="profile">
-  <%= image_tag @doc.img_url %>
+  <%= image_tag @doc.img_url unless @doc.img_url.blank? %>
 </div>
 
 <h2>Stories</h2>

@@ -24,13 +24,13 @@
       <% end %>
 
     </div>
-    <% if !current_user %>
-      <%= link_to "New to StoryDoc?  Join Here!", new_user_registration_path %><br>
+    <% if !current_doc %>
+      <%= link_to "New to StoryDoc?  Join Here!", new_doc_registration_path %><br>
       <br>
-      <%= link_to "Sign in to your StoryDoc account", new_user_session_path %>
+      <%= link_to "Sign in to your StoryDoc account", new_doc_session_path %>
     <% else %>
-      <%= link_to "Sign out of StoryDoc", destroy_user_session_path, :method => :delete %>
-        <%= current_user.email %>
+      <%= link_to "Sign out of StoryDoc", destroy_doc_session_path, :method => :delete %>
+        <%= current_doc.email %>
     <% end %>
 
     <%= yield %>
