@@ -1,0 +1,25 @@
+StoryDoc
+
+With the end in mind:
+
+User will have stories stored on the app.  Stories are comprised of photos and posts, organized under the banner of a common theme.
+
+	think: Instagram, GitHub and Kickstarter combined.
+
+MVP:
+- functional HTML and CSS
+- user has individual “repo” for projects/stories
+- 2 models.  Documentarian and Story.  One-to-many relationship.
+- full CRUD functionality.
+
+
+USER STORIES (going forward, ‘story’ or ‘stories’ will be understood to be one-dimensional):
+
+- user will be able to add text to their story in a blog post format.
+- user will be able to add images in order to illustrate their story
+- user will be able to rate other users’ stories
+- user will be able to fundraise for their stories through a link on the story page.
+- user will be able to donate to stories they find compelling.
+- user will be able to store their completed stories together in one place.
+
+
