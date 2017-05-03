@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
     if @project.doc == current_doc
       @project.destroy
     else
-      flash[:alert] = "Only owner scan delete"
+      flash[:alert] = "Only owner can delete"
     end
     redirect_to doc_path(@doc)
   end
