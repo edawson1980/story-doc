@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170502213301) do
+ActiveRecord::Schema.define(version: 20170620171036) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170502213301) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.boolean  "admin"
     t.index ["email"], name: "index_docs_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_docs_on_reset_password_token", unique: true, using: :btree
   end
