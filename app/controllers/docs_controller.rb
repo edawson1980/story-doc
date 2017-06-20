@@ -1,6 +1,7 @@
 class DocsController < ApplicationController
 
   before_action :set_session
+  
 
   def set_session
     session[:history] ||= []
