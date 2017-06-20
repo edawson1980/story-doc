@@ -6,5 +6,9 @@
 
   <% @docs.each do |doc| %>
   <h2><%= link_to doc.name, doc %></h2>
+  <% if current_doc && current_doc.admin? %>
+    | <%= link_to "delete", doc, method: :delete,
+                                  data: { confirm: "Delete this user?" } %>
+  <% end %>
   <% end %>
 </div>

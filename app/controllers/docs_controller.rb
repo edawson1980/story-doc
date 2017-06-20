@@ -1,7 +1,7 @@
 class DocsController < ApplicationController
 
   before_action :set_session
-  
+
 
   def set_session
     session[:history] ||= []
@@ -41,7 +41,7 @@ end
 
   def destroy
     @doc = Doc.find(params[:id])
-    if @doc == current_doc
+    if @doc == current_doc || current_doc.admin?
       @doc.destroy
     else
       flash[:alert] = "Only owner can delete"
